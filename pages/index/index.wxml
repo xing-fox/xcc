@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="con_bg">
+    <image class="bg_image" mode="scaleToFill" src="../../images/top_bg.jpg"></image>
+    <view class="userNews">
+      <image class="userImage" src="{{ userInfo.avatarUrl }}"></image>
+      <text class="userName">你好{{ userInfo.nickName }}</text>
+    </view>
+  </view>
+  <view class="con_main">
+    <view class="main_bar">
+      <view wx:for="{{ titleBar }}" class="{{ barchoiseIndex == index ? 'bar_selectName' : 'bar_name' }}" data-index="{{ index }}" bindtap="changeSelect">{{ item }}</view>
+    </view>
+  </view>
+</view>
